@@ -1,23 +1,12 @@
-import express from 'express'
+import express from 'express';
+import cartsRouter from './routes/carts.router.js';
+import productsRouter from './routes/products.router.js';
 
-import productRouter from './routes/product.router.js'
-import cartRouter from './routes/cart.router.js'
-
-
-const app = express()
+const app = express();
 
 app.use(express.json())
 
-app.use('/static',express.static('public'))
-app.use('/api/products', productRouter)
-app.use('/api/carts', cartRouter)
+app.use('/api/carts', cartsRouter)
+app.use('/api/products', productsRouter)
 
-app.use('/', (request,response) => response.send('home'))
-
-
-
-
-
-const server= app.listen(8080,console.log('servidor corriendo'))
-
-server.on('error',()=>console.log('error '))
+app.listen(8080, ()=>{console.log("Servidor corriendo..");});
