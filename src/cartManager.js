@@ -42,7 +42,7 @@ class CartManager{
     }
     
     addById = async (cartID,productID,quantity) => {
-        const cart = await this.getCartById(cartID) 
+        const cart = await this.getById(cartID) 
         const product = cart.products?.find(product => product.product == productID)
 
         if 
