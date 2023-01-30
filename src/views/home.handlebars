@@ -1,0 +1,22 @@
+<h1 class="display-5 text-center">Lista</h1>
+
+<table class="table table-striped" >
+    <tr >
+        <td class="text-light">Producto</td>
+        <td class="text-light">Descripción</td>
+        <td class="text-light">Categoría</td>
+        <td class="text-light">Precio</td>
+        <td class="text-light" >Stock</td>
+        <td class="text-light">Código</td>
+    </tr>
+    {{#each products}}
+    <tr>
+        <td class="text-light" >{{this.title}}</td>
+        <td class="text-light">{{this.description}}</td>
+        <td class="text-light">{{this.category}}</td>
+        <td class="text-light" >{{this.price}}</td>
+        <td class="text-light" >{{this.stock}}</td>
+        <td class="text-light">{{this.code}}</td>
+    </tr>
+    {{/each}}  
+</table>

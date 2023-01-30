@@ -1,0 +1,27 @@
+<h1 class="display-5 text-center">Productos en tiempo real</h1>
+
+<table id="tablaProductos" class="table table-striped ">
+    <tr>
+        <td>Producto</td>
+        <td>Descripción</td>
+        <td>Categoría</td>
+        <td>Precio</td>
+        <td>Stock</td>
+        <td>Código</td>
+    </tr>
+    {{#each products}}
+    <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.price}}</td>
+        <td>{{this.stock}}</td>
+        <td>{{this.code}}</td>
+    </tr>
+    {{/each}}  
+</table>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/productosTR.js"></script>

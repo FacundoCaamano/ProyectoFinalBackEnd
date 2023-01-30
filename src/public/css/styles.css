@@ -1,0 +1,22 @@
+.titulos{
+    color: white;
+}
+
+.detalle{
+    color: white;
+}
+
+.boton{
+    background-color: aqua;
+    width: 150px;
+}
+
+.boton:hover{
+    background-color: rgb(126, 176, 180);
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}

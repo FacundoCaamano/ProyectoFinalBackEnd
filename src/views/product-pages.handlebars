@@ -1,0 +1,34 @@
+<h1 class="display-5 text-center">Productos disponibles</h1>
+<br>
+<table class="table table-dark table-striped table-hover">
+    <tr>
+        <td><strong>Producto</strong></td>
+        <td><strong>Descripción</strong></td>
+        <td><strong>Precio</strong></td>
+        <td><strong>Código</strong></td> 
+        <td><strong>Stock</strong></td>
+        <td><strong>Categoría</strong></td>
+    </tr>
+
+    {{#each payload}}
+        <tr>
+
+
+            <td> <button class="boton btn"><a href="products/{{this._id}}">{{this.title}}</a></button></td>
+            <td>{{this.description}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.code}}</td>
+            <td>{{this.stock}}</td>
+            <td>{{this.category}}</td>
+            <td><a class="btn btn-success" href="">Agregar al carrito</a></td>
+
+        </tr>
+    {{/each}}  
+
+</table>
+{{#if hasPrevPage}}
+    <a class="btn btn-danger" href="{{prevLink}}">Página Anterior</a>
+{{/if}}
+{{#if hasNextPage}}
+    <a class="btn btn-success" href="{{nextLink}}">Página Siguiente</a>
+{{/if}}
