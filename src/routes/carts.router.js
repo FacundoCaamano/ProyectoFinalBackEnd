@@ -26,12 +26,12 @@ router.get('/:cid', async (req, res) => {
 })
 
 
-router.post('/:cid/products/:pid', async (req, res) => {
+router.get('/:cid/products/:pid', async (req, res) => {
     try {
         const cartId = req.params.cid
         const productId = req.params.pid
         const newCart = await manager.addProductById(cartId,productId,1)
-        res.send({status: 'success', parameters: newCart.newCart, cart: newCart.cart})
+        res.send({status: 'success'})
     } catch (error) {
         res.status(401).send({status: 'error', message: error})
     }
