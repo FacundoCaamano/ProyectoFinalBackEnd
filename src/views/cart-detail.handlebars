@@ -4,6 +4,7 @@
 <h6 class="text-light">Try Another Cart</h6>
 {{else}}
 <h3 class="text-center text-light">Número: {{_id}}</h3>
+<h3 class="text-center">id: {{selCart._id}}</h3>
 <br>
 <a class="btn boton" href="#" onClick="history.go(-1)">Volver</a>
 <br>
@@ -20,7 +21,7 @@
        
             <td> <a class="detalle" href="/api/products/{{this.product._id}}">{{this.product.title}} {{this.product.description}}</a></td>
             <td class="detalle">{{this.quantity}}</td>
-        
+            <td><button class="btn btn-danger" type="button" name="removeFromCart" id="{{product._id}}">Eliminar</button></td>    
             
         </tr>
     {{/each}}  
